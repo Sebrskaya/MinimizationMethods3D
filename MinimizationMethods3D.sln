@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimizationMethods3D", "MinimizationMethods3D\MinimizationMethods3D.csproj", "{420E5195-BE89-4075-96A0-E01DC743227F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{420E5195-BE89-4075-96A0-E01DC743227F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420E5195-BE89-4075-96A0-E01DC743227F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420E5195-BE89-4075-96A0-E01DC743227F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420E5195-BE89-4075-96A0-E01DC743227F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {001D85F5-D83F-4AA6-8C9B-5019C60F5CCB}
+	EndGlobalSection
+EndGlobal
