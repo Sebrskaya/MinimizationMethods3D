@@ -1,16 +1,18 @@
-﻿using System;
+using System;
 
 class Program
 {
     static void Main()
     {
         double epsilon = 1e-6; // Погрешность ответа
-        double stepSize = 0.1; // Шаг обучения
+        double stepSize = 3.0; // Шаг обучения
         int maxIterations = 10000; // Максимальное число итераций
 
         // Начальные значения переменных
         double x = 1.0;
         double y = 2.0;
+        double x1 = x;
+        double y1 = y;
 
         int iteration = 0;
         double gradient1, gradient2;
@@ -22,13 +24,22 @@ class Program
             gradient2 = GradientFunctionPartialX2(x, y);
 
             // Обновляем переменные с постоянным шагом
-            x -= stepSize * gradient1;
-            y -= stepSize * gradient2;
+            
+            x = x1;
+            y = y1;
+
+            x1 = x - stepSize * gradient1;
+            y1 = y - stepSize * gradient2;
+
+            if (ObjectiveFunction(x1, y1) >= ObjectiveFunction(x, y))
+                stepSize = stepSize / 2;
+            
+
 
             iteration++;
 
             // Выход из цикла, если достигнута погрешность или максимальное число итераций
-        } while (iteration < maxIterations && Math.Sqrt(gradient1 * gradient1 + gradient2 * gradient2) > epsilon);
+        } while (iteration < maxIterations && Math.Abs(ObjectiveFunction(x1,y1) - ObjectiveFunction(x,y)) > epsilon);
 
         // Вычисляем значение функции в минимуме
         double minValue = ObjectiveFunction(x, y);
